@@ -4,7 +4,7 @@ import struct
 import time
 
 class ModbusTCPClient:
-    def __init__(self, host, port=502):
+    def __init__(self, host, port=5020):
         self.host = host
         self.port = port
         self.sock = None
@@ -94,7 +94,7 @@ def main():
     print("Połączono z WiFi:", wlan.ifconfig())
 
     # 2. Użycie klienta Modbus
-    client = ModbusTCPClient('172.16.160.64')  # Adres urządzenia Modbus
+    client = ModbusTCPClient('172.16.160.83')  # Adres urządzenia Modbus
     try:
         # Odczyt 5 rejestrów od adresu 0
         while(True):
